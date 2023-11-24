@@ -26,23 +26,23 @@
     - Controlled Inputs are the inputs who value is controlled by the state of the component and change to the value is handled by React component methods.
     
     ``` javascript
-        import React, { useState } from 'react';
+     import React, { useState } from 'react';
 
-        function ControlledInputExample() {
-          const [inputValue, setInputValue] = useState('');
-        
-          const handleChange = (e) => {
-            setInputValue(e.target.value);
-          };
-        
-          return (
-            <input
-              type="text"
-              value={inputValue}
-              onChange={handleChange}
-            />
-          );
-        }
+     function ControlledInputExample() {
+       const [inputValue, setInputValue] = useState('');
+     
+       const handleChange = (e) => {
+         setInputValue(e.target.value);
+       };
+     
+       return (
+         <input
+           type="text"
+           value={inputValue}
+           onChange={handleChange}
+         />
+       );
+     }
 
     ```
 
