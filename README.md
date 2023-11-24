@@ -227,3 +227,6 @@
     };
 
     ```
+
+11. **What is Lifting the state up?**
+    - Lifting state up in React involves moving shared state from child components to a common ancestor (parent) component and passing it down as props, facilitating centralized state management and synchronization among sibling components.
