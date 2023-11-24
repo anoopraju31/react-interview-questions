@@ -25,6 +25,7 @@
 4. **What is the difference between Controlled and Uncontrolled inputs?**
     - Controlled Inputs are the inputs who value is controlled by the state of the component and change to the value is handled by React component methods.
 
+
     ``` javascript
         import React, { useState } from 'react';
 
