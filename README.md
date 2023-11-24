@@ -71,3 +71,12 @@
 
     ```
     - In this example, the ref (inputRef) is used to get the current value of the input when the button is clicked. The value is not stored in the component's state.
+
+5. **What are some of the hooks commonly used in React?**
+    - Hook is a special function that allows functional components to access and interact with React features such as state and lifecycle methods.
+    - The most commonly used hooks are *useState*, *useEffect*, *useRef*, *useMemo* and *useCallback*.
+    - useState: It is a function that enables functional components to declare and manage state variables, providing a way to hold and update state within the component, with the returned array containing the current state value and a function to modify it.
+    - useEffect: It is used to perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM, and it runs after every render.
+    - useRef: It is used to create a mutable object that persists across renders and can be used to store and access values without causing re-renders, commonly used for accessing and interacting with the DOM.
+    - useMemo: It is used to memoize the result of a computation, preventing unnecessary recalculation of values during renders and optimizing performance by caching the result until the dependencies change.
+    - useCallback: It is used to memoize and obtain a memoized version of a callback function, preventing unnecessary re-creation of the function on each render and optimizing performance by caching the callback until the specified dependencies change.
