@@ -167,3 +167,12 @@
     }
 
     ```
+8. **What is the difference between useState and useRef?**
+   | Feature                   | `useState`                               | `useRef`                                 |
+|---------------------------|------------------------------------------|------------------------------------------|
+| **Purpose**               | Manage state in functional components    | Create mutable objects, often for DOM interactions or holding values without causing re-renders   |
+| **Re-renders**            | Changes trigger re-renders               | Changes do not trigger re-renders         |
+| **Updating Values**       | Use state variable and `setState` function | Directly update `.current` property of the `ref` object |
+| **Initialization**        | Requires initial state value             | Can be initialized with or without an initial value |
+| **Use Cases**             | Managing stateful data that causes re-renders | Accessing and interacting with the DOM, holding values without re-renders |
+| **Example**               | `const [count, setCount] = useState(0);` | `const myRef = useRef(initialValue);`    |
