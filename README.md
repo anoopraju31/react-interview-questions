@@ -18,7 +18,6 @@
    - A virtual DOM is a lightweight JavaScript representation of the Document Object Model (DOM).
    - Basically, it's a virtual representation of DOM using a nested JavaScript Object (nested React Element).
    - React Uses Virtual DOM to update the actual DOM.
-   - React uses a Diff Algorithm to compares the virtual DOM of previous state and the current state and find out the difference in Vitual DOM and re-renders nesscary the Component and then updates the Actual DOM.
-        
+   - React uses a Diff Algorithm to compares the virtual DOM of previous state and the current state and find out the difference in Vitual DOM and re-renders nesscary the Component and then updates the Actual DOM.        
    - *Disadvantage:* 
             1. The Virtual DOM can use more memory because it creates an additional representation of the DOM in memory.
