@@ -177,3 +177,6 @@
    | **Initialization**        | Requires initial state value             | Can be initialized with or without an initial value |
    | **Use Cases**             | Managing stateful data that causes re-renders | Accessing and interacting with the DOM, holding values without re-renders |
    | **Example**               | `const [count, setCount] = useState(0);` | `const myRef = useRef(initialValue);`    |
+
+9. **What is Context and how does it works?**
+    - In React, Context is a feature that allows you to pass data through the component tree without having to pass props down manually at every level.
