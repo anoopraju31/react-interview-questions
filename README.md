@@ -8,7 +8,6 @@
    React is a JavaScript Library for building User Interface.
         
 2. **What is JSX?**
-
    - JSX stands for JavaScript XML
    - JSX is simply a syntax extension of JavaScript.
    - JSX looks similar to HTML, it returns JavaScript Object which when rendered generates HTML.
