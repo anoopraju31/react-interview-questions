@@ -21,3 +21,52 @@
    - React uses a Diff Algorithm to compares the virtual DOM of previous state and the current state and find out the difference in Vitual DOM and re-renders nesscary the Component and then updates the Actual DOM.        
    - Disadvantage:
       - The Virtual DOM can use more memory because it creates an additional representation of the DOM in memory.
+            
+4. **What is the difference between Controlled and Uncontrolled inputs?**
+    - Controlled Inputs are the inputs who value is controlled by the state of the component and change to the value is handled by React component methods.
+
+    ```
+        import React, { useState } from 'react';
+
+        function ControlledInputExample() {
+          const [inputValue, setInputValue] = useState('');
+        
+          const handleChange = (e) => {
+            setInputValue(e.target.value);
+          };
+        
+          return (
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleChange}
+            />
+          );
+        }
+
+    ```
+
+   - In this example, the inputValue state is used to control the value of the text input. The handleChange function updates the state whenever the input value changes.
+    
+   - Uncontrolled Inputs on the other hand, does not store its value in the React component's state. Instead, the value is managed by the DOM itself. We typically use refs to interact with the DOM and get the current value when needed.
+    
+    ``` javascript
+    import React, { useRef } from 'react';
+
+    function UncontrolledInputExample() {
+      const inputRef = useRef();
+    
+      const handleClick = () => {
+        // Access the current value of the input using the ref
+        alert(`Input value: ${inputRef.current.value}`);
+      };
+    
+      return (
+        <div>
+          <input type="text" ref={inputRef} />
+          <button onClick={handleClick}>Get Input Value</button>
+        </div>
+      );
+    }
+
+    ```
