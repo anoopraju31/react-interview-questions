@@ -1,11 +1,5 @@
-<center>
-<h1> React Interview Questions </h1> 
-</center>
+# React Interview Questions 
+- A List of React Interview Questions and their answers. 
 
-<ul>
-    <li> A List of React Interview Questions and their answers. </li>
-</ul>
+## Questions
 
-<center>
-<h2>Questions </h2>
-</center>
