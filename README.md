@@ -185,7 +185,7 @@
 10. **What is Props Drilling?** 
     - Props drilling, also known as "prop passing" or "prop threading," refers to the situation in a React application where you need to pass data through several layers of nested components by explicitly providing them as props. 
     - This can occur when a deeply nested component needs access to data that is originally located in a higher-level ancestor component.
-    - ![Prop Drilling](https://res.cloudinary.com/practicaldev/image/fetch/s--YWOuVoW6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sx5c2nw5nideoz5vqe8q.png)
+    ![Prop Drilling](https://res.cloudinary.com/practicaldev/image/fetch/s--YWOuVoW6--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/sx5c2nw5nideoz5vqe8q.png)
     ``` JSX
     // Top-level component
     const App = () => {
