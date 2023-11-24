@@ -282,3 +282,6 @@
       };
       
     ```
+12. **What is State Management in React?**
+    - State management in React refers to the process of handling and controlling the state of a React application, including the organization, updating, and sharing of state data among components to ensure the application's user interface reflects the current application state accurately.
+    - 
