@@ -119,3 +119,51 @@
     }
 
     ```
+    
+7. **What is useCallback and how does it works?**
+   - useCallback is a React hook that memoizes a callback function, preventing it from being recreated on each render unless its dependencies change.
+   - This is useful in when passing callbacks to child components could result in unnecessary re-renders of those child components.
+   - useCallback ensures that the callback function is the same between renders unless the specified dependencies change.
+   - useCallback memoizes the provided callback function
+   - Memoization means that the same function reference is returned as long as the specified dependencies remain unchanged.
+   - useCallback takes two arguments: the callback function to memoize and an array of dependencies.
+   - The array of dependencies determines when the callback function should be recomputed.
+   - If any of the dependencies change between renders, the memoized callback is recalculated; otherwise, the cached function reference is used.
+    ``` javascript
+    import React, { useCallback, useState } from 'react';
+    
+    function ChildComponent({ onClick }) {
+      console.log('ChildComponent is rendered.');
+      return <button onClick={onClick}>Click me</button>;
+    }
+    
+    function ParentComponent() {
+      const [count, setCount] = useState(0);
+    
+      // Without useCallback:
+      // const handleClick = () => {
+      //   console.log('Button clicked!');
+      //   setCount(count + 1);
+      // };
+    
+      // With useCallback:
+      const handleClick = useCallback(() => {
+        console.log('Button clicked!');
+        setCount((prevCount) => prevCount + 1);
+      }, [setCount]);
+    
+      console.log('ParentComponent is rendered.');
+    
+      return (
+        <div>
+          <p>Count: {count}</p>
+          <ChildComponent onClick={handleClick} />
+        </div>
+      );
+    }
+    
+    function App() {
+      return <ParentComponent />;
+    }
+
+    ```
