@@ -180,3 +180,49 @@
 
 9. **What is Context and how does it works?**
     - In React, Context is a feature that allows you to pass data through the component tree without having to pass props down manually at every level.
+
+
+10. **What is Props Drilling?** 
+    - Props drilling, also known as "prop passing" or "prop threading," refers to the situation in a React application where you need to pass data through several layers of nested components by explicitly providing them as props. 
+    - This can occur when a deeply nested component needs access to data that is originally located in a higher-level ancestor component.
+    ``` JSX
+    // Top-level component
+    const App = () => {
+      const data = /* some data */;
+    
+      return (
+        <div>
+          <ComponentA data={data} />
+        </div>
+      );
+    };
+    
+    // ComponentA
+    const ComponentA = ({ data }) => {
+      return (
+        <div>
+          <ComponentB data={data} />
+        </div>
+      );
+    };
+    
+    // ComponentB
+    const ComponentB = ({ data }) => {
+      return (
+        <div>
+          <ComponentC data={data} />
+        </div>
+      );
+    };
+    
+    // ComponentC
+    const ComponentC = ({ data }) => {
+      // Access and use the data
+      return (
+        <div>
+          {data}
+        </div>
+      );
+    };
+
+    ```
