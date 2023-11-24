@@ -70,3 +70,4 @@
     }
 
     ```
+    - In this example, the ref (inputRef) is used to get the current value of the input when the button is clicked. The value is not stored in the component's state.
