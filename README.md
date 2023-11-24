@@ -80,3 +80,42 @@
     - useRef: It is used to create a mutable object that persists across renders and can be used to store and access values without causing re-renders, commonly used for accessing and interacting with the DOM.
     - useMemo: It is used to memoize the result of a computation, preventing unnecessary recalculation of values during renders and optimizing performance by caching the result until the dependencies change.
     - useCallback: It is used to memoize and obtain a memoized version of a callback function, preventing unnecessary re-creation of the function on each render and optimizing performance by caching the callback until the specified dependencies change.
+   
+6. **What is useMemo and how does it works?**
+    - useMemo is a React hook that is used to memoize the result of a function so that it's not recomputed on every render. 
+    - This can be useful in when a function's result depends on some inputs, and those inputs are expensive to compute.
+    - useMemo ensures that the function is only recomputed when its dependencies change.
+    - useMemo takes two arguments: the function to memoize and an array of dependencies.
+    - The array of dependencies determines when the memoized function should be recomputed.
+    - If any of the dependencies change between renders, the memoized function is recalculated; otherwise, the cached result is used.
+    ``` javascript
+    import React, { useMemo, useState } from 'react';
+    
+    function ExpensiveCalculationComponent({ a, b }) {
+      const expensiveResult = useMemo(() => {
+        // Perform some expensive calculation based on inputs a and b
+        console.log('Calculating...');
+        return a + b;
+      }, [a, b]); // Dependencies: a and b
+    
+      return (
+        <div>
+          <p>Result: {expensiveResult}</p>
+        </div>
+      );
+    }
+    
+    function App() {
+      const [valueA, setValueA] = useState(5);
+      const [valueB, setValueB] = useState(10);
+    
+      return (
+        <div>
+          <ExpensiveCalculationComponent a={valueA} b={valueB} />
+          <button onClick={() => setValueA(valueA + 1)}>Increment A</button>
+          <button onClick={() => setValueB(valueB + 1)}>Increment B</button>
+        </div>
+      );
+    }
+
+    ```
