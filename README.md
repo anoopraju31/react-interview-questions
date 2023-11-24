@@ -15,7 +15,7 @@
    - Both JS Engine and Browser does not  understand JSX directly, it needs to be transpiled (converting one code to another code) before reaching the JS Engine.
         
 3. **What is the Virtual DOM and how is it used by React?**
-   - A virtual DOM is a lightweight JavaScript representation of the Document Object Model (DOM).
+- A virtual DOM is a lightweight JavaScript representation of the Document Object Model (DOM).
    - Basically, it's a virtual representation of DOM using a nested JavaScript Object (nested React Element).
    - React Uses Virtual DOM to update the actual DOM.
    - React uses a Diff Algorithm to compares the virtual DOM of previous state and the current state and find out the difference in Vitual DOM and re-renders nesscary the Component and then updates the Actual DOM.
